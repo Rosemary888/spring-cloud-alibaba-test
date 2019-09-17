@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: business-service
+  cloud:
+      nacos:
+        discovery:
+          server-addr: 192.168.17.134:8848
+server:
+  port: 9001
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

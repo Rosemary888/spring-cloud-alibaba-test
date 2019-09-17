@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business/business-feign" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/business/business-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/dependencies" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider" charset="UTF-8" />

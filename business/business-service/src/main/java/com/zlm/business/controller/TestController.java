@@ -1,5 +1,6 @@
 package com.zlm.business.controller;
 
+import com.zlm.business.feign.UserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,11 +15,9 @@ public class TestController {
     @Autowired
     private RestTemplate restTemplate ;
 
-   /* @Autowired
-    public TestController(RestTemplate restTemplate) {
-        this.restTemplate = restTemplate;
-    }
-*/
+    @Autowired
+    private UserFeign userFeign ;
+
 
     @GetMapping(value = "/echo/{str}")
     public String echo(@PathVariable String str) {
@@ -37,6 +36,19 @@ public class TestController {
         // 使用服务名请求服务提供者
         return restTemplate.getForObject("http://provider/user/test?message=" + message, String.class);
     }
+    
+    @GetMapping(value = "/feign/json")
+    public String jsonFeign() {
+        String json = userFeign.json();
+        return json ;
+    }
+
+    @GetMapping(value = "/feign/test")
+    public String testFeign(@RequestParam String message) {
+        return userFeign.test(message);
+    }
+
+
 
 
 }

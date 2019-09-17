@@ -15,13 +15,13 @@ public class UserController {
 
     @Autowired
     private IUserService userService;
-    @GetMapping("test")
+    @GetMapping(value = "test")
     public String test(@RequestParam(value = "message") String message){
         String saHai = userService.saHai(message);
         return saHai ;
     }
 
-    @GetMapping("json")
+    @GetMapping(value = "json")
     public String json(){
         User user = userService.getJson();
         String result= JSONArray.fromObject(user).toString();

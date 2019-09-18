@@ -8,11 +8,6 @@ spring:
 server:
   port: 9001
 
-  ##Feign 是自带熔断器的，但默认是关闭的。需要在配置文件中配置打开它
-feign:
-  hystrix:
-    enabled: true
-
 management:
   endpoints:
     web:

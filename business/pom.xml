@@ -16,6 +16,7 @@
 
     <modules>
         <module>business-service</module>
+        <module>business-invoke-service</module>
         <module>business-feign</module>
     </modules>
 

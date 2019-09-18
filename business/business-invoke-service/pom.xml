@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>business-service</artifactId>
+    <artifactId>business-invoke-service</artifactId>
 
     <dependencies>
         <!-- Spring Boot Begin -->
@@ -33,8 +33,20 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.0.RELEASE</version>
+        </dependency>
+
         <!-- Spring Cloud End -->
 
+        <dependency>
+            <groupId>com.zlm</groupId>
+            <artifactId>business-feign</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
 
     </dependencies>
 
@@ -44,7 +56,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.zlm.business.BusinessServiceApplication</mainClass>
+                    <mainClass>com.zlm.business.invoke.BusinessInvokeApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

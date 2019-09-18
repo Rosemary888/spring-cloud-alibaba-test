@@ -1,0 +1,35 @@
+spring:
+  application:
+    # 应用名称
+    name: gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.17.134:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: BUSINESS-SERVICE
+          uri: lb://business-service
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix=1
+
+        - id: BUSINESS-INVOKE-SERVICE
+          uri: lb://business-invoke-service
+          predicates:
+            - Path=/api/feign/user/**
+          filters:
+            - StripPrefix=1
+server:
+  port: 8888
+
+# 配置日志级别，方别调试
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: business-invoke-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.17.134:8848
+server:
+  port: 9002
+
+  ##Feign 是自带熔断器的，但默认是关闭的。需要在配置文件中配置打开它
+feign:
+#  hystrix:
+#    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

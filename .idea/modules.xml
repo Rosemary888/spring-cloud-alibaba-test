@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/business/business.iml" filepath="$PROJECT_DIR$/business/business.iml" />
       <module fileurl="file://$PROJECT_DIR$/business/business-feign/business-feign.iml" filepath="$PROJECT_DIR$/business/business-feign/business-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/business-invoke-service/business-invoke-service.iml" filepath="$PROJECT_DIR$/business/business-invoke-service/business-invoke-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/business/business-service/business-service.iml" filepath="$PROJECT_DIR$/business/business-service/business-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/dependencies/dependencies.iml" filepath="$PROJECT_DIR$/dependencies/dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider.iml" filepath="$PROJECT_DIR$/provider/provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider-api/provider-api.iml" filepath="$PROJECT_DIR$/provider/provider-api/provider-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/provider/provider-service/provider-service.iml" filepath="$PROJECT_DIR$/provider/provider-service/provider-service.iml" />

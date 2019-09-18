@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gateway" />
         <module name="business-feign" />
         <module name="provider-api" />
-        <module name="business-service" />
         <module name="provider-service" />
+        <module name="business-invoke-service" />
+        <module name="business-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="business" target="1.8" />
       <module name="business-feign" target="1.8" />
+      <module name="business-invoke-service" target="1.8" />
       <module name="business-service" target="1.8" />
       <module name="dependencies" target="1.5" />
+      <module name="gateway" target="1.8" />
       <module name="provider" target="1.8" />
       <module name="provider-api" target="1.8" />
       <module name="provider-service" target="1.8" />
@@ -26,7 +30,9 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="business-feign" options="-parameters" />
+      <module name="business-invoke-service" options="-parameters" />
       <module name="business-service" options="-parameters" />
+      <module name="gateway" options="-parameters" />
       <module name="provider-api" options="-parameters" />
       <module name="provider-service" options="-parameters" />
     </option>
